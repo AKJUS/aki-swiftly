@@ -445,7 +445,7 @@ extension SwiftlyWebsiteAPI.Components.Schemas.DevToolchainForArch {
                     message: "malformatted release branch: \"\(majorString).\(minorString)\"")
             }
             let patch = match.output.3.map(String.init)
-            branch = .release(major: major, minor: minor, patch: patch)
+            branch = .releaseNormalized(major: major, minor: minor, patch: patch)
         } else {
             branch = .main
         }
